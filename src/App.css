@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
+/* Review List */
+
+.reviewList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.reviewList-item{
+    width: 100%;
+    border: 5px solid #2680EB;
+    margin:15px;
+    box-sizing: border-box;
+    border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.reviewList-item .reviewList-item-card {
+    padding:15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.reviewList-item .reviewList-item-header {
+    height: 150px;
+    background-position: center;
+    background-size: cover;
 }
 
-.App-link {
-  color: #61dafb;
+.reviewList-item .reviewList-item-body {
+    padding:15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.reviewList-item .reviewList-item-body_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
+.reviewList-item .reviewList-item-body_header h4.reviewScore {
+    margin-left:15px;
+}
+
+.reviewList-item .reviewList-item-body button {
+    color:#ffffff;
+    background-color: #2680EB;
+    border: none;
+    width:100%;
+    padding:10px;
+}
+
+@media only screen and (min-width:600px){
+    .reviewList-item{
+        width:calc(33% - 50px);
+        margin:25px;
+    }
+}
+/* Review List */
