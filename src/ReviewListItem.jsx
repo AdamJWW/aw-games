@@ -1,5 +1,4 @@
 export default function ReviewListItem ({review}) {
-    console.log(review);
     const bgImg = {backgroundImage: `url(${review.review_img_url})`}
     const previewBody = shortenBody()
     function shortenBody() {

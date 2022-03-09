@@ -16,4 +16,13 @@ const fetchReviews = () => {
     )
 };
 
-export default fetchReviews;
+const fetchCategories = () => {
+  return (
+    baseApi.get('categories')
+    .then((res) => {
+      return res.data.categories;
+    })
+    )
+};
+
+export {fetchReviews, fetchCategories};
