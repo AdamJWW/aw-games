@@ -1,3 +1,30 @@
+/* Category List */
+
+.categoryList{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+}
+
+.categoryList-item{
+    text-transform: capitalize;
+    padding: 15px;
+}
+
+.categoryList-item a{
+    border: none;
+    background-color: #e2e2e2;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.categoryTitle {
+    text-transform: capitalize;
+}
+
+/* Category List */
+
 /* Review List */
 
 .reviewList{
