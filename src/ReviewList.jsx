@@ -45,6 +45,7 @@ export default function ReviewList ({categoryName}){
                         All reviews
                     </a>
                 </li>
+                {/* This map may need changing down the line */}
                 {categories.map((category) => {
                     return(
                         <li key={category.slug} className='categoryList-item'>
@@ -56,6 +57,7 @@ export default function ReviewList ({categoryName}){
                         </li>
                     )
                 })}
+                {/* This map may need changing down the line */}
             </ul>
             <h2 id="categoryTitle" className='categoryTitle'>{displayCategory(selectedCategory)}</h2>
             <ul className='reviewList'>
