@@ -22,7 +22,7 @@ export default function CategoryMenu() {
                 {categories.map((category) => {
                     return(
                         <li key={category.slug} className='categoryList-item'>
-                            <Link to={`/categories/${category.slug}`}>
+                            <Link to={`/reviews/categories/${category.slug}`}>
                                 {category.slug}
                             </Link>
                         </li>

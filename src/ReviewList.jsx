@@ -1,16 +1,19 @@
 import { useEffect, useState } from 'react';
-import {fetchReviews } from './Api';
+import { useParams } from 'react-router-dom';
+import { fetchReviews } from './Api';
 import ReviewListItem from './ReviewListItem';
 import CategoryMenu from './CategoryMenu';
 
 export default function ReviewList ({categoryName}){
+    const { catName } = useParams();
+
     useEffect(() => {
-        fetchReviews().then((data) => {
+        fetchReviews(catName).then((data) => {
             setReviews(data);
         }).catch((err) => {
             alert(err);
         })
-    }, [])
+    }, [catName])
     const [reviews, setReviews] = useState([])
     
     return(
