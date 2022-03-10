@@ -4,9 +4,13 @@ const baseApi = axios.create({
   baseURL: 'https://adams-bg-reviews.herokuapp.com/api/',
 });
 
-const fetchReviews = () => {
+const fetchReviews = (categoryName) => {
   return (
-    baseApi.get('reviews')
+    baseApi.get('reviews', {
+      params: {
+        category: categoryName,
+      },
+    },)
     .then((res) => {
       return res.data.reviews;
     })

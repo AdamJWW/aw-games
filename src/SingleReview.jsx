@@ -10,7 +10,7 @@ export default function SingleReview() {
         fetchReviewById(reviewID).then((res) => {
           setReview(res);
         });
-      }, []);
+      }, [reviewID]);
 
       const bgImg = {backgroundImage: `url(${review.review_img_url})`}
 

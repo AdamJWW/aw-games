@@ -5,7 +5,6 @@ import App from './App';
 import Header from './Header';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SingleReview from './SingleReview';
-import CategoryList from './CategoryList';
 
 
 ReactDOM.render(
@@ -16,7 +15,7 @@ ReactDOM.render(
       <Route path="/" element={<App/>}/>
       <Route path="/reviews" element={<App/>}/>
       <Route path="/reviews/:reviewID" element={<SingleReview/>}/>
-      <Route path="/categories/:catName" element={<CategoryList/>}/>
+      <Route path="/reviews/categories/:catName" element={<App/>}/>
     </Routes>
     </BrowserRouter>
 
