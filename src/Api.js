@@ -37,4 +37,16 @@ const fetchReviewById = (review_id) => {
   )
 }
 
-export {fetchReviews, fetchCategories, fetchReviewById};
+const fetchReviewsByCategory = (categoryName) => {
+  return (
+    baseApi.get(`reviews/?category=${categoryName}`)
+    .then((res) => {
+      return res.data.reviews;
+    })
+    .catch((err) => {
+      alert(err);
+    })
+  )
+}
+
+export {fetchReviews, fetchCategories, fetchReviewById, fetchReviewsByCategory};

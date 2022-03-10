@@ -6,7 +6,19 @@
     margin-right: auto;
 }
 
+h1 {
+    text-align: center;
+}
+
 /* General */
+
+/* Header */
+
+header {
+    text-align: center;
+}
+
+/* Header */
 
 /* Category List */
 
@@ -42,6 +54,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     list-style: none;
+    padding-left: 0px;
 }
 
 .reviewList-item{
