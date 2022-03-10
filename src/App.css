@@ -1,3 +1,13 @@
+/* General */
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* General */
+
 /* Category List */
 
 .categoryList{
@@ -72,6 +82,7 @@
     border: none;
     width:100%;
     padding:10px;
+    cursor: pointer;
 }
 
 @media only screen and (min-width:600px){
@@ -81,3 +92,39 @@
     }
 }
 /* Review List */
+
+/* Single Review */
+
+.singleReview-header{
+    height:500px;
+    justify-content: end;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+.singleReview-header-banner{
+    padding:20px;
+    background-color: #2680EB;
+    margin: 0px;
+    width: 100%;
+}
+
+.singleReview-body {
+    padding:60px;
+}
+
+.singleReview-footer {
+    text-align: center;
+    padding: 25px 60px 85px 60px;
+}
+
+.singleReview-footer a {
+    padding:25px;
+    background-color: #2680EB;
+    color: #ffffff;
+}
+
+/* Single Review */
