@@ -15,11 +15,17 @@ export default function ReviewList ({categoryName}){
         })
     }, [catName])
     const [reviews, setReviews] = useState([])
-    
+    const title = () => {
+        if (catName !== undefined){
+            return catName.replace(/-/g, ' ')
+        } else {
+            return "All Reviews"
+        }
+    }
     return(
         <section>
             <CategoryMenu />
-            <h1 id="categoryTitle" className='categoryTitle'>All Reviews</h1>
+            <h1 id="categoryTitle" className='categoryTitle'>{title()}</h1>
             <ul className='reviewList'>
                 {reviews.map((review) => {
                         return(

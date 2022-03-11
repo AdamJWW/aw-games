@@ -41,4 +41,18 @@ const fetchReviewById = (review_id) => {
   )
 }
 
-export {fetchReviews, fetchCategories, fetchReviewById};
+const fetchCommentByReview = (review_id) => {
+  return (
+    baseApi.get(`reviews/${review_id}/comments`)
+    .then((res) => {
+      return res.data.comments;
+    })
+    .catch((err) => {
+      alert(err);
+    })
+  )
+}
+
+
+
+export {fetchReviews, fetchCategories, fetchReviewById, fetchCommentByReview};
