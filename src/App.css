@@ -142,3 +142,23 @@ header {
 }
 
 /* Single Review */
+
+/* Comment Section */
+
+.commentSection ul {
+    list-style: none;
+}
+
+.commentSection li {
+    border: 2px solid #2680EB;
+    padding:25px;
+    margin-top:15px;
+}
+
+.commentListItem-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Comment Section */

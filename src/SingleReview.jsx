@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { fetchReviewById } from "./Api";
+import { fetchReviewById, fetchCommentByReview } from "./Api";
+import CommentListItem from './CommentListItem';
 
 export default function SingleReview() {
     const [review, setReview] = useState([]);
+    const [comments, setComments] = useState([]);
+
     const { reviewID } = useParams();
 
     useEffect(() => {
@@ -11,6 +14,12 @@ export default function SingleReview() {
           setReview(res);
         });
       }, [reviewID]);
+
+      useEffect(() => {
+        fetchCommentByReview(reviewID).then((res) => {
+          setComments(res);
+        })
+      }, [reviewID])
 
       const bgImg = {backgroundImage: `url(${review.review_img_url})`}
 
@@ -32,6 +41,15 @@ export default function SingleReview() {
                 <Link to="/reviews">
                     Go back to all reviews
                 </Link>
+              </div>
+              <div className='commentSection container'>
+                  <ul>
+                  {comments.map((comment) => {
+                        return(
+                            <CommentListItem key={comment.comment_id} comment={comment}/>
+                        )
+                  })}
+                  </ul>
               </div>
           </section>
       )
